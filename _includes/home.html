@@ -71,12 +71,14 @@
 {%- if mail %}
 <section class="section reveal">
   <p class="eyebrow">{{ t.get_in_touch }}</p>
+  {%- assign mail_address = mail.url | remove: 'mailto:' -%}
   <div class="callout">
     <p>{{ t.contact_line }}</p>
-    <p style="margin-bottom:0">
+    <p style="margin-bottom:0;display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.1rem">
       <a class="btn btn--primary" href="{{ mail.url }}">
         {%- include icon.html name="mail" -%} {{ t.email_me }}
       </a>
+      <a href="{{ mail.url }}" style="font-family:var(--font-mono);font-size:.845rem">{{ mail_address }}</a>
     </p>
   </div>
 </section>
