@@ -108,6 +108,22 @@ sections:
           tr: "Tıp Fakültesi, Bursa Uludağ Üniversitesi"
         place: "Bursa"
 
+  - key: "certifications"
+    en: "Certifications"
+    tr: "Sertifikalar"
+    items:
+      - period: "2026"
+        title:
+          en: "Clinical TMS Practitioner"
+          tr: "Klinik TMS Uygulayıcısı"
+        org:
+          en: "Academy of Brain Stimulation"
+          tr: "Academy of Brain Stimulation"
+        place: ""
+        detail:
+          en: "International Clinical Transcranial Magnetic Stimulation Certification Course · three-year certification · 15 European CME credits (EACCME / UEMS)"
+          tr: "Uluslararası Klinik Transkraniyal Manyetik Uyarım Sertifika Kursu · üç yıl geçerli · 15 Avrupa SMEK kredisi (EACCME / UEMS)"
+
   - key: "clinical"
     en: "Clinical focus"
     tr: "Klinik ilgi alanları"

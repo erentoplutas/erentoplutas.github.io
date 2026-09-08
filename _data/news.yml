@@ -9,6 +9,12 @@
 #  Listeyi boşaltırsanız ([]) bölüm otomatik gizlenir.
 # ══════════════════════════════════════════════════════════════
 
+- date: 2026-09-04
+  label: "2026"
+  en: "Certified as a **Clinical TMS Practitioner** by the Academy of Brain Stimulation."
+  tr: "**Academy of Brain Stimulation** tarafından Klinik TMS Uygulayıcısı olarak sertifikalandırıldım."
+  url: ""
+
 - date: 2026-02-01
   label: "2026"
   en: "*Altered EEG microstate transition patterns and visual hallucinations in Parkinson's Disease* published in the **International Journal of Psychophysiology**."
