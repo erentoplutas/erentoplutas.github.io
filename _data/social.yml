@@ -24,7 +24,7 @@
 
 - name: "Google Scholar"
   icon: "scholar"
-  url: "hhttps://scholar.google.com.tr/citations?user=syQhpiAAAAAJ&hl=en"
+  url: "https://scholar.google.com/citations?user=syQhpiAAAAAJ&hl=tr"
 
 - name: "ResearchGate"
   icon: "researchgate"
