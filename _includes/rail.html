@@ -1,0 +1,64 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign p = site.data.profile -%}
+{%- assign lang = page.lang | default: site.default_lang -%}
+{%- if lang == 'en' %}{% assign home_url = '/' %}{% else %}{% assign home_url = '/tr/' %}{% endif -%}
+{%- if page.alt_url %}{% assign switch_url = page.alt_url %}{% elsif lang == 'en' %}{% assign switch_url = '/tr/' %}{% else %}{% assign switch_url = '/' %}{% endif -%}
+
+<aside class="rail">
+  <img class="rail__photo"
+       src="{{ p.photo | relative_url }}"
+       alt="{{ p.name }}"
+       width="116" height="116"
+       loading="eager" decoding="async">
+
+  <div class="rail__id">
+    <p class="rail__name"><a href="{{ home_url | relative_url }}">{{ p.name }}</a></p>
+    <p class="rail__role">{{ p.role[lang] }}</p>
+  </div>
+
+  <p class="rail__meta">
+    {{ p.affiliation[lang] }}<br>
+    {{ p.location[lang] }}
+  </p>
+
+  <nav class="nav" aria-label="{{ t.menu }}">
+    {%- for item in site.data.nav -%}
+      {%- assign link = item[lang] -%}
+      <a class="nav__link"
+         href="{{ link.url | relative_url }}"
+         {% if page.nav_key == item.key %}aria-current="page"{% endif %}>{{ link.label }}</a>
+    {%- endfor -%}
+  </nav>
+
+  <div class="rail__end">
+    <ul class="social">
+      {%- for s in site.data.social -%}
+        <li>
+          <a class="social__link"
+             href="{{ s.url }}"
+             title="{{ s.name }}"
+             aria-label="{{ s.name }}"
+             {% unless s.url contains 'mailto:' %}target="_blank" rel="me noopener"{% endunless %}>
+            {%- include icon.html name=s.icon -%}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+
+    <div class="controls">
+      <button class="ctl ctl--icon" type="button" data-theme-toggle
+              aria-label="{{ t.theme_toggle }}" title="{{ t.theme_toggle }}">
+        {%- include icon.html name="sun" -%}
+        {%- include icon.html name="moon" -%}
+      </button>
+
+      <a class="ctl" href="{{ switch_url | relative_url }}"
+         lang="{% if lang == 'en' %}tr{% else %}en{% endif %}"
+         hreflang="{% if lang == 'en' %}tr{% else %}en{% endif %}"
+         aria-label="{{ t.lang_switch }}" title="{{ t.lang_switch }}">
+        {%- include icon.html name="globe" -%}
+        {{ t.lang_switch_short }}
+      </a>
+    </div>
+  </div>
+</aside>

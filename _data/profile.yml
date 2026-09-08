@@ -1,0 +1,108 @@
+# ══════════════════════════════════════════════════════════════
+#  KİŞİSEL BİLGİLER / PROFILE
+#  Buradaki her alan iki dillidir: en = İngilizce, tr = Türkçe
+# ══════════════════════════════════════════════════════════════
+
+name: "Eren Toplutaş"
+
+# İsmin altında görünen kısa satır
+role:
+  en: "MD, PhD · Neurologist &amp; Neuroscientist"
+  tr: "Dr. Öğr. Üyesi · Nöroloji Uzmanı ve Sinirbilimci"
+
+affiliation:
+  en: "Department of Neurology, School of Medicine, Istanbul Medipol University"
+  tr: "Nöroloji Anabilim Dalı, Tıp Fakültesi, İstanbul Medipol Üniversitesi"
+
+location:
+  en: "Istanbul, Türkiye"
+  tr: "İstanbul, Türkiye"
+
+# Profil fotoğrafı — değiştirmek için yeni kare görseli
+# assets/img/ içine koyup yolu burada güncelleyin
+photo: "/assets/img/profile.jpg"
+
+# Ana sayfadaki giriş cümlesi (büyük punto)
+lead:
+  en: >
+    I am a neurologist and neuroscientist studying EEG microstates,
+    resting-state brain networks and neuromodulation.
+  tr: >
+    EEG mikrodurumları, dinlenim durumu beyin ağları ve nöromodülasyon
+    üzerine çalışan bir nörolog ve sinirbilimciyim.
+
+# Ana sayfadaki serbest paragraflar (Markdown kullanabilirsiniz)
+bio:
+  en:
+    - >
+      I completed my medical degree at Bursa Uludağ University, my residency in
+      neurology at Istanbul Medipol University (2021) and a PhD in neuroscience
+      at the same university (2025). I now teach in the Department of Neurology
+      and see patients at Medipol Mega University Hospital — mainly epilepsy and
+      EEG, movement disorders, dementia, disorders of consciousness and stroke.
+    - >
+      My research uses EEG microstate analysis and quantitative EEG to ask how
+      resting-state brain networks reorganise in disorders of consciousness,
+      Parkinson's disease and Alzheimer's disease, and how non-invasive
+      neuromodulation — rTMS, tDCS and tACS — changes them. The aim throughout is
+      objective, EEG-based markers that hold up at the bedside.
+    - >
+      I work in the Clinical Electrophysiology, Neuroimaging and Neuromodulation
+      Laboratory (SABİTA / REMER) and the Brain and Cognition Research Centre
+      (BEYKOG), and I am a co-author in the international *EEG-meta-microstates*
+      consortium led by Prof. Christoph M. Michel (University of Geneva), which
+      works towards making microstate findings comparable across studies and
+      sites.
+  tr:
+    - >
+      Tıp eğitimimi Bursa Uludağ Üniversitesi'nde, nöroloji uzmanlık eğitimimi
+      İstanbul Medipol Üniversitesi'nde (2021) ve sinirbilim doktoramı yine aynı
+      üniversitede (2025) tamamladım. Hâlen Nöroloji Anabilim Dalı'nda ders
+      veriyor, Medipol Mega Üniversite Hastanesi'nde başta epilepsi ve EEG,
+      hareket bozuklukları, demans, bilinç bozuklukları ve inme olmak üzere
+      hasta kabul ediyorum.
+    - >
+      Araştırmalarımda EEG mikrodurum analizi ve nicel EEG (qEEG) kullanarak
+      bilinç bozukluklarında, Parkinson ve Alzheimer hastalığında dinlenim
+      durumu beyin ağlarının nasıl yeniden örgütlendiğini; invaziv olmayan
+      nöromodülasyonun — rTMS, tDCS ve tACS — bu ağları nasıl değiştirdiğini
+      inceliyorum. Amacım klinikte de karşılığı olan, EEG temelli nesnel
+      biyobelirteçler geliştirmek.
+    - >
+      Klinik Elektrofizyoloji, Nörogörüntüleme ve Nöromodülasyon Laboratuvarı
+      (SABİTA / REMER) ile Beyin ve Biliş Araştırmaları Merkezi (BEYKOG)
+      bünyesinde çalışıyorum. Ayrıca mikrodurum bulgularının çalışmalar ve
+      merkezler arasında karşılaştırılabilir hâle getirilmesini amaçlayan,
+      Cenevre Üniversitesi'nden Prof. Christoph M. Michel öncülüğündeki
+      uluslararası *EEG-meta-microstates* konsorsiyumunun ortak yazarlarındanım.
+
+# Ana sayfadaki etiketler
+interests:
+  en:
+    - "EEG microstates"
+    - "Quantitative EEG (qEEG)"
+    - "Resting-state networks"
+    - "Disorders of consciousness"
+    - "Parkinson's disease"
+    - "Alzheimer's disease &amp; dementia"
+    - "Neuromodulation (rTMS, tDCS, tACS)"
+    - "Epilepsy &amp; EEG"
+    - "Clinical neurophysiology"
+  tr:
+    - "EEG mikrodurumları"
+    - "Nicel EEG (qEEG)"
+    - "Dinlenim durumu ağları"
+    - "Bilinç bozuklukları"
+    - "Parkinson hastalığı"
+    - "Alzheimer ve demans"
+    - "Nöromodülasyon (rTMS, tDCS, tACS)"
+    - "Epilepsi ve EEG"
+    - "Klinik nörofizyoloji"
+
+# Yayın listesinde kalın gösterilecek isim varyantları
+# Name variants to bold in the publication list
+name_highlight:
+  - "Toplutaş E"
+  - "Toplutaş, E."
+  - "E. Toplutaş"
+  - "Eren Toplutaş"

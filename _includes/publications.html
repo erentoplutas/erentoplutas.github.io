@@ -1,0 +1,39 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign lang = page.lang -%}
+{%- assign cats = site.data.publications.categories -%}
+{%- assign all = site.data.publications.items -%}
+
+{%- comment -%} Tek kategori varsa filtre satırını gösterme {%- endcomment -%}
+{%- assign nonempty = 0 -%}
+{%- for c in cats -%}
+  {%- assign n = all | where: "category", c.key -%}
+  {%- if n.size > 0 %}{% assign nonempty = nonempty | plus: 1 %}{% endif -%}
+{%- endfor -%}
+
+{%- if nonempty > 1 %}
+<div class="reveal" style="margin-bottom:2rem">
+  <ul class="chips">
+    <li><button class="chip" type="button" data-filter="all" aria-pressed="true">{{ t.pub_filter_all }}</button></li>
+    {%- for c in cats -%}
+      {%- assign n = all | where: "category", c.key -%}
+      {%- if n.size > 0 %}
+    <li><button class="chip" type="button" data-filter="{{ c.key }}" aria-pressed="false">{{ c[lang] }}</button></li>
+      {%- endif -%}
+    {%- endfor %}
+  </ul>
+</div>
+{%- endif %}
+
+{%- for c in cats -%}
+  {%- assign items = all | where: "category", c.key | sort: "year" | reverse -%}
+  {%- if items.size > 0 %}
+<section class="pub-group" data-pub-group="{{ c.key }}">
+  <p class="eyebrow">{{ c[lang] }}</p>
+  <ul class="pubs">
+    {%- for item in items -%}
+      {%- include pub-item.html item=item -%}
+    {%- endfor %}
+  </ul>
+</section>
+  {%- endif -%}
+{%- endfor -%}

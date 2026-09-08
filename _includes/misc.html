@@ -1,0 +1,24 @@
+{%- assign lang = page.lang -%}
+{%- assign m = site.data.misc -%}
+
+{%- if m.intro %}
+<p class="muted reveal" style="max-width:58ch">{{ m.intro[lang] }}</p>
+{%- endif %}
+
+<div class="cards">
+  {%- for b in m.blocks %}
+  <article class="card reveal">
+    <h3>{{ b.title[lang] }}</h3>
+    <p>{{ b.body[lang] }}</p>
+    {%- if b.links and b.links.size > 0 %}
+    <div class="card__links">
+      {%- for l in b.links %}
+      {%- assign is_external = false -%}
+      {%- if l.url contains '//' %}{% assign is_external = true %}{% endif -%}
+      <a class="taglink" href="{{ l.url }}"{% if is_external %} target="_blank" rel="noopener"{% endif %}>{{ l.label[lang] }}</a>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+  </article>
+  {%- endfor %}
+</div>

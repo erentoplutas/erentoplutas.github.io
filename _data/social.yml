@@ -1,0 +1,35 @@
+# ══════════════════════════════════════════════════════════════
+#  BAĞLANTILAR / SOCIAL LINKS
+#
+#  ⚠️  CHANGEME yazan adresleri kendi profil adreslerinizle
+#      değiştirin ya da o satırları tamamen silin.
+#      Kullanmadığınız bir servisi silmeniz yeterli.
+#
+#  icon: _includes/icon.html içindeki adlardan biri olmalı
+#        (mail, scholar, orcid, researchgate, linkedin, github,
+#         x, bluesky, globe)
+# ══════════════════════════════════════════════════════════════
+
+- name: "E-posta / Email"
+  icon: "mail"
+  url: "mailto:erentoplutas@gmail.com"
+
+- name: "ORCID"
+  icon: "orcid"
+  url: "https://orcid.org/0000-0001-6365-7702"
+
+- name: "PubMed"
+  icon: "globe"
+  url: "https://pubmed.ncbi.nlm.nih.gov/?term=Toplutas+E%5BAuthor%5D"
+
+- name: "Google Scholar"
+  icon: "scholar"
+  url: "https://scholar.google.com/citations?user=CHANGEME"
+
+- name: "ResearchGate"
+  icon: "researchgate"
+  url: "https://www.researchgate.net/profile/CHANGEME"
+
+- name: "LinkedIn"
+  icon: "linkedin"
+  url: "https://www.linkedin.com/in/CHANGEME"

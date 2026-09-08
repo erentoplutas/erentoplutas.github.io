@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.default_lang }}">
+<head>
+  {%- include head.html -%}
+</head>
+<body>
+  {%- assign t = site.data.i18n[page.lang] -%}
+  <a class="skip" href="#content">{{ t.skip_to_content }}</a>
+
+  <div class="shell">
+    {%- include rail.html -%}
+
+    <main class="main" id="content">
+      {{ content }}
+      {%- include footer.html -%}
+    </main>
+  </div>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+</body>
+</html>

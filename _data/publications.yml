@@ -1,0 +1,89 @@
+# ══════════════════════════════════════════════════════════════
+#  YAYINLAR / PUBLICATIONS
+#
+#  categories : sayfadaki gruplar ve sıraları
+#  items      : yayınlar (sıra önemsiz, sayfa yıla göre sıralar)
+#
+#  Zorunlu alanlar: category, year, authors, title
+#  İsteğe bağlı  : venue, details, doi, url, pdf, code, selected, note
+#  selected: true  →  ana sayfadaki "Seçilmiş yayınlar" bölümüne çıkar
+#
+#  Boş kalan kategoriler sayfada otomatik gizlenir.
+# ══════════════════════════════════════════════════════════════
+
+categories:
+  - key: "article"
+    en: "Journal articles"
+    tr: "Makaleler"
+  - key: "chapter"
+    en: "Book chapters"
+    tr: "Kitap bölümleri"
+  - key: "conference"
+    en: "Conference papers &amp; posters"
+    tr: "Kongre bildirileri ve posterler"
+  - key: "progress"
+    en: "In progress"
+    tr: "Devam eden çalışmalar"
+
+items:
+  - category: "article"
+    year: 2026
+    authors: "Toplutaş E, Uysal-Kaba R, Güntekin B, Hanoğlu L"
+    title: "Altered EEG microstate transition patterns and visual hallucinations in Parkinson's Disease"
+    venue: "International Journal of Psychophysiology"
+    details: "113369"
+    url: "https://pubmed.ncbi.nlm.nih.gov/41895342/"
+    selected: true
+
+  - category: "article"
+    year: 2026
+    authors: "Sayman C, Toplutaş E, Aylak U, Safa SS, Savcılı M, Karakuş A, Uçak D, Hanoğlu L, Cankaya S, Mardinoglu A, Yuluğ B"
+    title: "Resting-state EEG microstates link neural dynamics to fluid intelligence in mild cognitive impairment"
+    venue: "Frontiers in Aging Neuroscience"
+    details: "18, 1734828"
+    doi: "10.3389/fnagi.2026.1734828"
+
+  - category: "article"
+    year: 2025
+    authors: "Çadırcı Tungaç F, Toplutaş E, Mantar N, Güntekin B, Hanoğlu L"
+    title: "Apathy in Parkinson's Disease: EEG Microstate Characteristics"
+    venue: "Brain Topography"
+    details: "38(4), 49"
+    doi: "10.1007/s10548-025-01124-z"
+
+  - category: "article"
+    year: 2024
+    authors: "Toplutaş E, Aydın F, Hanoğlu L"
+    title: "EEG Microstate Analysis in Patients with Disorders of Consciousness and Its Clinical Significance"
+    venue: "Brain Topography"
+    details: "37(3), 377–387"
+    doi: "10.1007/s10548-023-00939-y"
+    selected: true
+
+  - category: "article"
+    year: 2024
+    authors: "Koenig T, Diezig S, Nagabhushan Kalburgi S, Antonova E, Artoni F, Brechet L, Britz J, Croce P, Custo A, Damborská A, Deolindo C, Heinrichs M, Kleinert T, Liang Z, Murphy MM, Nash K, Nehaniv C, Schiller B, Smailovic U, Tarailis P, Tomescu M, Toplutaş E, Vellante F, Zanesco A, Zappasodi F, Zou Q, Michel CM"
+    title: "EEG-Meta-Microstates: Towards a More Objective Use of Resting-State EEG Microstate Findings Across Studies"
+    venue: "Brain Topography"
+    details: "37(2), 218–231"
+    doi: "10.1007/s10548-023-00993-6"
+    selected: true
+
+  - category: "article"
+    year: 2022
+    authors: "Hanoğlu L, Toplutaş E, Sarıcaoğlu M, Velioğlu HA, Yıldız S, Yuluğ B"
+    title: "Therapeutic Role of Repetitive Transcranial Magnetic Stimulation in Alzheimer's and Parkinson's Disease: Electroencephalography Microstate Correlates"
+    venue: "Frontiers in Neuroscience"
+    details: "16, 798558"
+    doi: "10.3389/fnins.2022.798558"
+
+  # ── Kongre bildirilerinizi buraya ekleyin ────────────────────
+  # CV'nizde "çok sayıda sözlü ve poster bildiri" yazıyor ama
+  # tek tek listelenmemiş. Eklemek isterseniz kalıp şu şekilde:
+  #
+  # - category: "conference"
+  #   year: 2025
+  #   authors: "Toplutaş E, Hanoğlu L"
+  #   title: "Bildiri başlığı"
+  #   venue: "Kongre adı, Şehir"
+  #   url: ""

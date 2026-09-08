@@ -1,0 +1,66 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign p = site.data.profile -%}
+{%- capture page_title -%}
+  {%- if page.title and page.nav_key != 'about' -%}{{ page.title }} · {{ p.name }}{%- else -%}{{ p.name }} — {{ p.role[page.lang] | strip_html }}{%- endif -%}
+{%- endcapture -%}
+{%- assign page_desc = page.description | default: p.lead[page.lang] | strip_newlines | strip -%}
+{%- comment -%} çift kodlamayı önle / normalise entities before escaping {%- endcomment -%}
+{%- assign title_attr = page_title | strip_html | replace: '&amp;', '&' | escape -%}
+{%- assign desc_attr = page_desc | strip_html | replace: '&amp;', '&' | escape -%}
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title_attr }}</title>
+<meta name="description" content="{{ desc_attr }}">
+<meta name="author" content="{{ p.name }}">
+<meta name="theme-color" content="#fbfaf7">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+{%- comment -%} Dil alternatifleri / hreflang {%- endcomment -%}
+{%- if page.alt_url %}
+<link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url | absolute_url }}">
+<link rel="alternate" hreflang="{% if page.lang == 'en' %}tr{% else %}en{% endif %}" href="{{ page.alt_url | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{% if page.lang == 'en' %}{{ page.url | absolute_url }}{% else %}{{ page.alt_url | absolute_url }}{% endif %}">
+{%- endif %}
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ p.name }}">
+<meta property="og:locale" content="{% if page.lang == 'tr' %}tr_TR{% else %}en_US{% endif %}">
+<meta property="og:title" content="{{ title_attr }}">
+<meta property="og:description" content="{{ desc_attr }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+{%- comment -%} Sayfa yüklenirken tema titremesini önler {%- endcomment -%}
+<script>
+  (function () {
+    try {
+      var s = localStorage.getItem('theme');
+      if (s === 'dark' || s === 'light') {
+        document.documentElement.setAttribute('data-theme', s);
+        var m = document.querySelector('meta[name="theme-color"]');
+        if (m && s === 'dark') m.setAttribute('content', '#0d0f11');
+      }
+    } catch (e) {}
+  })();
+</script>
+
+{%- assign profiles = site.data.social | where_exp: "s", "s.icon != 'mail'" -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ p.name | jsonify }},
+  "jobTitle": {{ p.role[page.lang] | strip_html | replace: '&amp;', '&' | jsonify }},
+  "affiliation": {{ p.affiliation[page.lang] | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "sameAs": {{ profiles | map: "url" | jsonify }}
+}
+</script>

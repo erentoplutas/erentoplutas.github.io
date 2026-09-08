@@ -1,0 +1,34 @@
+# ══════════════════════════════════════════════════════════════
+#  HABERLER / NEWS  —  ana sayfada son 4 tanesi gösterilir
+#
+#  date  : sıralama için (yeniden eskiye). Gün/ayı bilmiyorsanız
+#          ayın 1'ini yazın; ekranda görünmez.
+#  label : ekranda görünen etiket. Yazmazsanız "Eyl 2026" gibi
+#          otomatik biçimlendirilir.
+#  url   : varsa bağlantı (boş bırakılabilir)
+#  Listeyi boşaltırsanız ([]) bölüm otomatik gizlenir.
+# ══════════════════════════════════════════════════════════════
+
+- date: 2026-02-01
+  label: "2026"
+  en: "*Altered EEG microstate transition patterns and visual hallucinations in Parkinson's Disease* published in the **International Journal of Psychophysiology**."
+  tr: "*Altered EEG microstate transition patterns and visual hallucinations in Parkinson's Disease* çalışması **International Journal of Psychophysiology** dergisinde yayımlandı."
+  url: "https://pubmed.ncbi.nlm.nih.gov/41895342/"
+
+- date: 2026-01-01
+  label: "2026"
+  en: "New paper on resting-state EEG microstates and fluid intelligence in mild cognitive impairment, in **Frontiers in Aging Neuroscience**."
+  tr: "Hafif bilişsel bozuklukta dinlenim durumu EEG mikrodurumları ve akışkan zekâ üzerine yeni makale, **Frontiers in Aging Neuroscience** dergisinde."
+  url: "https://doi.org/10.3389/fnagi.2026.1734828"
+
+- date: 2025-09-01
+  label: "2025"
+  en: "Completed my PhD in Neuroscience at the Institute of Health Sciences, Istanbul Medipol University."
+  tr: "İstanbul Medipol Üniversitesi Sağlık Bilimleri Enstitüsü'nde Sinirbilim doktoramı tamamladım."
+  url: ""
+
+- date: 2025-06-01
+  label: "2025"
+  en: "*Apathy in Parkinson's Disease: EEG Microstate Characteristics* published in **Brain Topography**."
+  tr: "*Apathy in Parkinson's Disease: EEG Microstate Characteristics* çalışması **Brain Topography** dergisinde yayımlandı."
+  url: "https://doi.org/10.1007/s10548-025-01124-z"

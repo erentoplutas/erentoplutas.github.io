@@ -1,0 +1,70 @@
+# ══════════════════════════════════════════════════════════════
+#  SITE SETTINGS  —  edit this file first
+#  Bu dosyayı ilk olarak düzenleyin
+# ══════════════════════════════════════════════════════════════
+
+title: "Eren Toplutaş"
+short_title: "E. Toplutaş"
+
+# GitHub Pages'te bunu kendi kullanıcı adınızla değiştirin
+# Replace with your own GitHub username
+url: "https://erentoplutas.github.io"
+baseurl: ""
+
+# Sosyal paylaşımlarda görünecek varsayılan görsel
+og_image: "/assets/img/og.png"
+
+# ── Diller / Languages ────────────────────────────────────────
+default_lang: "en"
+languages:
+  - code: "en"
+    label: "EN"
+    name: "English"
+  - code: "tr"
+    label: "TR"
+    name: "Türkçe"
+
+# ── Görünüm / Appearance ──────────────────────────────────────
+# Accent renk assets/css/style.css içindeki --accent değişkeninden
+# de değiştirilebilir.
+theme_default: "auto"   # auto | light | dark
+
+# ══════════════════════════════════════════════════════════════
+#  JEKYLL — buradan aşağısına genelde dokunmanız gerekmez
+# ══════════════════════════════════════════════════════════════
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  hard_wrap: false
+
+sass:
+  style: compressed
+
+permalink: /:title/
+timezone: Europe/Istanbul
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - .github
+  - preview
+  - "*.mjs"
+  - package.json
+  - package-lock.json
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "page"
+      lang: "en"
+  - scope:
+      path: "tr"
+    values:
+      layout: "page"
+      lang: "tr"

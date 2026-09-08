@@ -1,0 +1,46 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign lang = page.lang -%}
+{%- assign cv = site.data.cv -%}
+
+<div class="reveal">
+  {%- if cv.intro %}
+  <p class="muted" style="max-width:58ch">{{ cv.intro[lang] }}</p>
+  {%- endif %}
+
+  {%- if cv.pdf and cv.pdf != '' %}
+  <p style="display:flex;flex-wrap:wrap;gap:.8rem;align-items:center">
+    <a class="btn btn--primary" href="{{ cv.pdf | relative_url }}" target="_blank" rel="noopener">
+      {%- include icon.html name="download" -%} {{ t.cv_download }}
+    </a>
+    {%- if cv.updated %}
+    <span class="muted" style="font-size:.85rem">{{ t.cv_updated }}: {{ cv.updated[lang] }}</span>
+    {%- endif %}
+  </p>
+  {%- endif %}
+</div>
+
+{%- for section in cv.sections -%}
+  {%- if section.items and section.items.size > 0 %}
+<section class="cv-section reveal">
+  <p class="eyebrow">{{ section[lang] }}</p>
+  <ul class="timeline">
+    {%- for e in section.items %}
+    {%- assign e_org = e.org[lang] -%}
+    {%- assign e_detail = e.detail[lang] -%}
+    <li class="entry">
+      {%- if e.period and e.period != '' %}
+      <span class="entry__period">{{ e.period | replace: '—', '–' }}</span>
+      {%- endif %}
+      <p class="entry__title">{{ e.title[lang] }}</p>
+      {%- if e_org != blank or e.place != blank %}
+      <p class="entry__org">{{ e_org }}{% if e.place != blank %}{% if e_org != blank %} <span class="entry__place">· {{ e.place }}</span>{% else %}<span class="entry__place">{{ e.place }}</span>{% endif %}{% endif %}</p>
+      {%- endif %}
+      {%- if e_detail != blank %}
+      <p class="entry__detail">{{ e_detail }}</p>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+  {%- endif -%}
+{%- endfor -%}

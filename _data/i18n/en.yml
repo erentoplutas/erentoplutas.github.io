@@ -1,0 +1,47 @@
+# UI strings — English
+skip_to_content: "Skip to content"
+menu: "Menu"
+close: "Close"
+theme_toggle: "Switch colour theme"
+lang_switch: "Türkçe'ye geç"
+lang_switch_short: "TR"
+
+interests: "Research interests"
+news: "News"
+selected_publications: "Selected publications"
+view_all: "All publications"
+all_news: "All news"
+get_in_touch: "Get in touch"
+contact_line: "Happy to hear about collaborations, data sharing and student projects."
+email_me: "Send an email"
+
+# Publications
+pub_intro: "Peer-reviewed articles, chapters and conference work."
+pub_filter_all: "All"
+pub_count_one: "publication"
+pub_count_other: "publications"
+doi: "DOI"
+pdf: "PDF"
+code: "Code"
+link: "Link"
+abstract: "Abstract"
+cite: "Cite"
+copied: "Copied"
+
+# CV
+cv_download: "Download CV (PDF)"
+cv_updated: "Last updated"
+present: "Present"
+
+# Footer
+built_with: "Built with Jekyll · hosted on GitHub Pages"
+back_to_top: "Back to top"
+rights: "All rights reserved."
+
+# Misc / 404
+not_found_title: "Page not found"
+not_found_body: "That page does not exist — it may have moved or been renamed."
+go_home: "Go to the homepage"
+
+# Ay kısaltmaları / month abbreviations
+months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]

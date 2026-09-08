@@ -1,0 +1,63 @@
+{%- assign it = include.item -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+
+{%- comment -%} Kendi ismini kalınlaştır / bold own name {%- endcomment -%}
+{%- assign authors = it.authors -%}
+{%- for n in site.data.profile.name_highlight -%}
+  {%- capture wrapped %}<span class="me">{{ n }}</span>{% endcapture -%}
+  {%- assign authors = authors | replace: n, wrapped -%}
+{%- endfor -%}
+
+{%- if it.url and it.url != '' -%}
+  {%- assign primary = it.url -%}
+{%- elsif it.doi and it.doi != '' -%}
+  {%- capture primary %}https://doi.org/{{ it.doi }}{% endcapture -%}
+{%- else -%}
+  {%- assign primary = nil -%}
+{%- endif -%}
+
+<li class="pub reveal">
+  <div class="pub__year">{{ it.year }}</div>
+  <div>
+    <h3 class="pub__title">
+      {%- if primary -%}
+        <a href="{{ primary }}" target="_blank" rel="noopener">{{ it.title }}</a>
+      {%- else -%}
+        {{ it.title }}
+      {%- endif -%}
+    </h3>
+
+    <p class="pub__authors">{{ authors }}</p>
+
+    {%- if it.venue and it.venue != '' %}
+    <p class="pub__venue"><em>{{ it.venue }}</em>{% if it.details and it.details != '' %} · {{ it.details }}{% endif %}</p>
+    {%- endif %}
+
+    {%- if it.note %}
+    <span class="pub__note">{{ it.note[page.lang] }}</span>
+    {%- endif %}
+
+    {%- assign has_links = false -%}
+    {%- if it.doi and it.doi != '' %}{% assign has_links = true %}{% endif -%}
+    {%- if it.pdf and it.pdf != '' %}{% assign has_links = true %}{% endif -%}
+    {%- if it.code and it.code != '' %}{% assign has_links = true %}{% endif -%}
+    {%- if it.url and it.url != '' %}{% assign has_links = true %}{% endif -%}
+
+    {%- if has_links %}
+    <div class="pub__links">
+      {%- if it.doi and it.doi != '' %}
+      <a class="taglink" href="https://doi.org/{{ it.doi }}" target="_blank" rel="noopener">{{ t.doi }}</a>
+      {%- endif %}
+      {%- if it.pdf and it.pdf != '' %}
+      <a class="taglink" href="{{ it.pdf | relative_url }}" target="_blank" rel="noopener">{{ t.pdf }}</a>
+      {%- endif %}
+      {%- if it.code and it.code != '' %}
+      <a class="taglink" href="{{ it.code }}" target="_blank" rel="noopener">{{ t.code }}</a>
+      {%- endif %}
+      {%- if it.url and it.url != '' %}
+      <a class="taglink" href="{{ it.url }}" target="_blank" rel="noopener">{{ t.link }}</a>
+      {%- endif %}
+    </div>
+    {%- endif %}
+  </div>
+</li>

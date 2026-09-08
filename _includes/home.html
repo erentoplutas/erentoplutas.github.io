@@ -1,0 +1,83 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign p = site.data.profile -%}
+{%- assign lang = page.lang -%}
+
+<div class="reveal">
+  <p class="hero__kicker">{{ p.role[lang] }} <span class="hero__dot">·</span> {{ p.affiliation[lang] }}</p>
+  <h1 class="hero">{{ p.lead[lang] }}</h1>
+</div>
+
+<div class="prose reveal">
+  {%- for para in p.bio[lang] %}
+  {{ para | markdownify }}
+  {%- endfor %}
+</div>
+
+{%- if p.interests[lang] and p.interests[lang].size > 0 %}
+<section class="section reveal">
+  <p class="eyebrow">{{ t.interests }}</p>
+  <ul class="chips">
+    {%- for i in p.interests[lang] %}
+    <li class="chip">{{ i }}</li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- assign news = site.data.news | sort: "date" | reverse -%}
+{%- if news.size > 0 %}
+<section class="section reveal">
+  <p class="eyebrow">{{ t.news }}</p>
+  <ul class="news">
+    {%- for n in news limit: 4 %}
+    {%- assign mi = n.date | date: "%m" | plus: 0 | minus: 1 -%}
+    <li class="news__item">
+      <span class="news__date">{% if n.label %}{{ n.label }}{% else %}{{ t.months[mi] }} {{ n.date | date: "%Y" }}{% endif %}</span>
+      <p class="news__body">
+        {%- if n.url and n.url != '' -%}
+          <a href="{{ n.url }}" target="_blank" rel="noopener">{{ n[lang] | markdownify | remove: '<p>' | remove: '</p>' | strip }}</a>
+        {%- else -%}
+          {{ n[lang] | markdownify | remove: '<p>' | remove: '</p>' | strip }}
+        {%- endif -%}
+      </p>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+{%- assign selected = site.data.publications.items | where_exp: "i", "i.selected" | sort: "year" | reverse -%}
+{%- if selected.size > 0 %}
+<section class="section reveal">
+  <p class="eyebrow">{{ t.selected_publications }}</p>
+  <ul class="pubs">
+    {%- for item in selected %}
+      {%- include pub-item.html item=item -%}
+    {%- endfor %}
+  </ul>
+  {%- for nav in site.data.nav -%}
+    {%- if nav.key == 'publications' %}
+  <p style="margin-top:1.4rem">
+    <a class="btn" href="{{ nav[lang].url | relative_url }}">
+      {{ t.view_all }} {%- include icon.html name="arrow" -%}
+    </a>
+  </p>
+    {%- endif -%}
+  {%- endfor -%}
+</section>
+{%- endif %}
+
+{%- assign mail = site.data.social | where: "icon", "mail" | first -%}
+{%- if mail %}
+<section class="section reveal">
+  <p class="eyebrow">{{ t.get_in_touch }}</p>
+  <div class="callout">
+    <p>{{ t.contact_line }}</p>
+    <p style="margin-bottom:0">
+      <a class="btn btn--primary" href="{{ mail.url }}">
+        {%- include icon.html name="mail" -%} {{ t.email_me }}
+      </a>
+    </p>
+  </div>
+</section>
+{%- endif %}

@@ -1,0 +1,20 @@
+# ══════════════════════════════════════════════════════════════
+#  MENÜ / NAVIGATION
+#  key: sayfanın front-matter'ındaki nav_key ile eşleşir
+# ══════════════════════════════════════════════════════════════
+
+- key: "about"
+  en: { label: "About",        url: "/" }
+  tr: { label: "Hakkımda",     url: "/tr/" }
+
+- key: "publications"
+  en: { label: "Publications", url: "/publications/" }
+  tr: { label: "Yayınlar",     url: "/tr/yayinlar/" }
+
+- key: "cv"
+  en: { label: "CV",           url: "/cv/" }
+  tr: { label: "Özgeçmiş",     url: "/tr/ozgecmis/" }
+
+- key: "misc"
+  en: { label: "Misc",         url: "/misc/" }
+  tr: { label: "Diğer",        url: "/tr/diger/" }

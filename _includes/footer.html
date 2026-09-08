@@ -1,0 +1,5 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+<footer class="foot">
+  <span>&copy; <span data-year>{{ site.time | date: "%Y" }}</span> {{ site.data.profile.name }}. {{ t.rights }}</span>
+  <span>{{ t.built_with }}</span>
+</footer>

@@ -1,0 +1,47 @@
+# Arayüz metinleri — Türkçe
+skip_to_content: "İçeriğe geç"
+menu: "Menü"
+close: "Kapat"
+theme_toggle: "Renk temasını değiştir"
+lang_switch: "Switch to English"
+lang_switch_short: "EN"
+
+interests: "Araştırma alanları"
+news: "Haberler"
+selected_publications: "Seçilmiş yayınlar"
+view_all: "Tüm yayınlar"
+all_news: "Tüm haberler"
+get_in_touch: "İletişim"
+contact_line: "İş birlikleri, veri paylaşımı ve öğrenci projeleri için yazabilirsiniz."
+email_me: "E-posta gönder"
+
+# Yayınlar
+pub_intro: "Hakemli makaleler, kitap bölümleri ve kongre çalışmaları."
+pub_filter_all: "Tümü"
+pub_count_one: "yayın"
+pub_count_other: "yayın"
+doi: "DOI"
+pdf: "PDF"
+code: "Kod"
+link: "Bağlantı"
+abstract: "Özet"
+cite: "Atıf"
+copied: "Kopyalandı"
+
+# Özgeçmiş
+cv_download: "Özgeçmişi indir (PDF)"
+cv_updated: "Son güncelleme"
+present: "Devam ediyor"
+
+# Alt bilgi
+built_with: "Jekyll ile hazırlandı · GitHub Pages üzerinde"
+back_to_top: "Yukarı dön"
+rights: "Tüm hakları saklıdır."
+
+# Diğer / 404
+not_found_title: "Sayfa bulunamadı"
+not_found_body: "Aradığınız sayfa yok — taşınmış ya da adı değişmiş olabilir."
+go_home: "Ana sayfaya dön"
+
+# Ay kısaltmaları
+months: ["Oca", "Şub", "Mar", "Nis", "May", "Haz", "Tem", "Ağu", "Eyl", "Eki", "Kas", "Ara"]

@@ -1,0 +1,44 @@
+# ══════════════════════════════════════════════════════════════
+#  DİĞER / MISC  —  serbest bölümler
+#  Her blok: title, body, links (opsiyonel)
+#  İstemediğiniz bloğu silin, yenisini aynı kalıpla ekleyin.
+# ══════════════════════════════════════════════════════════════
+
+intro:
+  en: "Clinic, laboratory, collaborations — and how to get in touch about a project."
+  tr: "Klinik, laboratuvar, iş birlikleri — ve bir proje için nasıl ulaşabileceğiniz."
+
+blocks:
+  - title:
+      en: "Clinic"
+      tr: "Klinik"
+    body:
+      en: "I see patients at Medipol Mega University Hospital: epilepsy and EEG, movement disorders, dementia and Alzheimer's disease, disorders of consciousness, stroke, headache and neuromuscular disease."
+      tr: "Medipol Mega Üniversite Hastanesi'nde hasta kabul ediyorum: epilepsi ve EEG, hareket bozuklukları, demans ve Alzheimer hastalığı, bilinç bozuklukları, inme, baş ağrısı ve nöromüsküler hastalıklar."
+
+  - title:
+      en: "Laboratory"
+      tr: "Laboratuvar"
+    body:
+      en: "Clinical Electrophysiology, Neuroimaging and Neuromodulation Laboratory (SABİTA / REMER) and the Brain and Cognition Research Centre (BEYKOG) at Istanbul Medipol University — EEG microstates, quantitative EEG and rTMS / tDCS / tACS."
+      tr: "İstanbul Medipol Üniversitesi bünyesindeki Klinik Elektrofizyoloji, Nörogörüntüleme ve Nöromodülasyon Laboratuvarı (SABİTA / REMER) ve Beyin ve Biliş Araştırmaları Merkezi (BEYKOG) — EEG mikrodurumları, nicel EEG ve rTMS / tDCS / tACS."
+
+  - title:
+      en: "International collaborations"
+      tr: "Uluslararası iş birlikleri"
+    body:
+      en: "Co-author in the EEG-meta-microstates consortium led by Prof. Christoph M. Michel (University of Geneva), working towards standardising resting-state microstate analysis; also part of the nationwide NÖROTEK stroke research network."
+      tr: "Cenevre Üniversitesi'nden Prof. Christoph M. Michel öncülüğünde, dinlenim durumu mikrodurum analizinin standardizasyonunu amaçlayan EEG-meta-microstates konsorsiyumunda ortak yazar; ayrıca Türkiye genelindeki NÖROTEK inme araştırma ağının bir parçası."
+    links:
+      - label: { en: "EEG-meta-microstates", tr: "EEG-meta-microstates" }
+        url: "https://doi.org/10.1007/s10548-023-00993-6"
+
+  - title:
+      en: "For students"
+      tr: "Öğrenciler için"
+    body:
+      en: "If you are a medical or graduate student interested in EEG, microstate analysis or neuromodulation, write to me with a short note about what you would like to work on."
+      tr: "EEG, mikrodurum analizi ya da nöromodülasyona ilgi duyan bir tıp veya lisansüstü öğrencisiyseniz, çalışmak istediğiniz konuyu kısaca yazarak bana ulaşabilirsiniz."
+    links:
+      - label: { en: "Email", tr: "E-posta" }
+        url: "mailto:erentoplutas@gmail.com"

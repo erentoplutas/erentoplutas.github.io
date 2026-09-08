@@ -1,0 +1,9 @@
+---
+layout: default
+lang: en
+permalink: /404.html
+---
+{%- assign t = site.data.i18n[page.lang] -%}
+<h1>{{ t.not_found_title }}</h1>
+<p class="muted">{{ t.not_found_body }}</p>
+<p><a class="btn" href="{{ '/' | relative_url }}">{%- include icon.html name="arrow" -%} {{ t.go_home }}</a></p>
