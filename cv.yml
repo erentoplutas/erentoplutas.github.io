@@ -1,0 +1,246 @@
+# ══════════════════════════════════════════════════════════════
+#  ÖZGEÇMİŞ / CV
+#
+#  pdf      : assets/files/ içindeki PDF'in yolu ("" yazarsanız
+#             indirme butonu gizlenir)
+#  updated  : sayfada gösterilen son güncelleme tarihi
+#  sections : sırayla gösterilecek bölümler
+#             her giriş: period, title, org, place, detail (opsiyonel)
+# ══════════════════════════════════════════════════════════════
+
+# PDF indirme butonu kapalı. Açmak isterseniz PDF'i
+# assets/files/ içine koyup yolunu buraya yazın:
+#   pdf: "/assets/files/cv.pdf"
+pdf: ""
+
+updated:
+  en: "September 2026"
+  tr: "Eylül 2026"
+
+intro:
+  en: "A short version of my academic record. Write to me if you need a detailed CV."
+  tr: "Akademik geçmişimin kısa bir özeti. Ayrıntılı özgeçmiş için bana yazabilirsiniz."
+
+sections:
+  - key: "appointments"
+    en: "Appointments"
+    tr: "Görevler"
+    items:
+      - period: "2022 —"
+        title:
+          en: "Assistant Professor of Neurology"
+          tr: "Dr. Öğr. Üyesi, Nöroloji"
+        org:
+          en: "Department of Neurology, School of Medicine, Istanbul Medipol University"
+          tr: "Nöroloji Anabilim Dalı, Tıp Fakültesi, İstanbul Medipol Üniversitesi"
+        place: "İstanbul"
+
+      - period: "2022 —"
+        title:
+          en: "Consultant Neurologist"
+          tr: "Nöroloji Uzmanı"
+        org:
+          en: "Medipol Mega University Hospital"
+          tr: "Medipol Mega Üniversite Hastanesi"
+        place: "İstanbul"
+        detail:
+          en: "Epilepsy and EEG, movement disorders, dementia, disorders of consciousness, stroke, headache and neuromuscular disease."
+          tr: "Epilepsi ve EEG, hareket bozuklukları, demans, bilinç bozuklukları, inme, baş ağrısı ve nöromüsküler hastalıklar."
+
+      - period: "2022 —"
+        title:
+          en: "Researcher and instructor"
+          tr: "Araştırmacı ve eğitimci"
+        org:
+          en: "Brain and Cognition Research Centre (BEYKOG), Istanbul Medipol University"
+          tr: "Beyin ve Biliş Araştırmaları Merkezi (BEYKOG), İstanbul Medipol Üniversitesi"
+        place: ""
+        detail:
+          en: "Clinical Electrophysiology, Neuroimaging and Neuromodulation Laboratory (SABİTA / REMER)."
+          tr: "Klinik Elektrofizyoloji, Nörogörüntüleme ve Nöromodülasyon Laboratuvarı (SABİTA / REMER)."
+
+      - period: "2021 — 2022"
+        title:
+          en: "Consultant Neurologist"
+          tr: "Nöroloji Uzmanı"
+        org:
+          en: "Eyüpsultan State Hospital"
+          tr: "İstanbul Eyüpsultan Devlet Hastanesi"
+        place: "İstanbul"
+
+      - period: "2017 — 2021"
+        title:
+          en: "Resident in Neurology"
+          tr: "Araştırma Görevlisi · Nöroloji uzmanlık öğrencisi"
+        org:
+          en: "School of Medicine, Istanbul Medipol University"
+          tr: "Tıp Fakültesi, İstanbul Medipol Üniversitesi"
+        place: "İstanbul"
+
+  - key: "education"
+    en: "Education"
+    tr: "Eğitim"
+    items:
+      - period: "2019 — 2025"
+        title:
+          en: "PhD in Neuroscience"
+          tr: "Sinirbilim Doktorası (Ph.D.)"
+        org:
+          en: "Institute of Health Sciences, Istanbul Medipol University"
+          tr: "Sağlık Bilimleri Enstitüsü, İstanbul Medipol Üniversitesi"
+        place: "İstanbul"
+
+      - period: "2017 — 2021"
+        title:
+          en: "Residency in Neurology"
+          tr: "Nöroloji Uzmanlık Eğitimi"
+        org:
+          en: "School of Medicine, Istanbul Medipol University"
+          tr: "Tıp Fakültesi, İstanbul Medipol Üniversitesi"
+        place: "İstanbul"
+
+      - period: "2009 — 2016"
+        title:
+          en: "Doctor of Medicine (MD)"
+          tr: "Tıp Doktoru"
+        org:
+          en: "School of Medicine, Bursa Uludağ University"
+          tr: "Tıp Fakültesi, Bursa Uludağ Üniversitesi"
+        place: "Bursa"
+
+  - key: "clinical"
+    en: "Clinical focus"
+    tr: "Klinik ilgi alanları"
+    items:
+      - period: ""
+        title:
+          en: "Epilepsy and EEG · Clinical neurophysiology"
+          tr: "Epilepsi ve EEG · Klinik nörofizyoloji"
+        org:
+          en: "Routine and long-term EEG, EMG, evoked potentials"
+          tr: "Rutin ve uzun süreli EEG, EMG, uyandırılmış potansiyeller"
+        place: ""
+
+      - period: ""
+        title:
+          en: "Movement disorders · Dementia"
+          tr: "Hareket bozuklukları · Demans"
+        org:
+          en: "Parkinson's disease, Alzheimer's disease and related conditions"
+          tr: "Parkinson hastalığı, Alzheimer hastalığı ve ilişkili durumlar"
+        place: ""
+
+      - period: ""
+        title:
+          en: "Disorders of consciousness · Stroke"
+          tr: "Bilinç bozuklukları · İnme"
+        org:
+          en: "Also headache and neuromuscular disease"
+          tr: "Ayrıca baş ağrısı ve nöromüsküler hastalıklar"
+        place: ""
+
+  - key: "methods"
+    en: "Methods &amp; tools"
+    tr: "Yöntemler ve araçlar"
+    items:
+      - period: ""
+        title:
+          en: "EEG microstate analysis · quantitative EEG (qEEG)"
+          tr: "EEG mikrodurum analizi · nicel EEG (qEEG)"
+        org:
+          en: "Resting-state network analysis and objective EEG biomarkers"
+          tr: "Dinlenim durumu ağ analizi ve nesnel EEG biyobelirteçleri"
+        place: ""
+
+      - period: ""
+        title:
+          en: "Non-invasive neuromodulation"
+          tr: "İnvaziv olmayan nöromodülasyon"
+        org:
+          en: "rTMS, tDCS, tACS"
+          tr: "rTMS, tDCS, tACS"
+        place: ""
+
+      - period: ""
+        title:
+          en: "Clinical EEG and EMG assessment"
+          tr: "Klinik EEG ve EMG değerlendirme"
+        org:
+          en: "Functional brain imaging"
+          tr: "İşlevsel beyin görüntüleme"
+        place: ""
+
+      - period: ""
+        title:
+          en: "Neurophysiological data analysis"
+          tr: "Nörofizyolojik veri analizi"
+        org:
+          en: "Statistical modelling"
+          tr: "İstatistiksel modelleme"
+        place: ""
+
+  - key: "collaborations"
+    en: "Collaborations &amp; projects"
+    tr: "İş birlikleri ve projeler"
+    items:
+      - period: ""
+        title:
+          en: "EEG-meta-microstates consortium"
+          tr: "EEG-meta-microstates konsorsiyumu"
+        org:
+          en: "Led by Prof. Christoph M. Michel, University of Geneva — with University of Miami, Peking University and 'G. d'Annunzio' University of Chieti, among others"
+          tr: "Cenevre Üniversitesi'nden Prof. Christoph M. Michel öncülüğünde — University of Miami, Peking University ve 'G. d'Annunzio' University of Chieti gibi merkezlerle"
+        place: ""
+
+      - period: ""
+        title:
+          en: "NÖROTEK — Turkish nationwide one-day stroke study"
+          tr: "NÖROTEK — Türkiye Nöroloji Tek Gün Çalışması"
+        org:
+          en: "Multicentre stroke research network"
+          tr: "Çok merkezli inme araştırma ağı"
+        place: ""
+
+      - period: ""
+        title:
+          en: "TÜBİTAK-funded research projects"
+          tr: "TÜBİTAK destekli araştırma projeleri"
+        org:
+          en: "Researcher"
+          tr: "Araştırmacı"
+        place: ""
+
+  - key: "memberships"
+    en: "Memberships"
+    tr: "Üyelikler"
+    items:
+      - period: ""
+        title:
+          en: "Turkish Neurological Society"
+          tr: "Türk Nöroloji Derneği"
+        org:
+          en: ""
+          tr: ""
+        place: ""
+
+      - period: ""
+        title:
+          en: "Turkish Society of Clinical Neurophysiology EEG-EMG"
+          tr: "Türk Klinik Nörofizyoloji EEG-EMG Derneği"
+        org:
+          en: ""
+          tr: ""
+        place: ""
+
+  - key: "languages"
+    en: "Languages"
+    tr: "Diller"
+    items:
+      - period: ""
+        title:
+          en: "Turkish — native · English — advanced (academic)"
+          tr: "Türkçe — ana dil · İngilizce — ileri düzey (akademik)"
+        org:
+          en: ""
+          tr: ""
+        place: ""
