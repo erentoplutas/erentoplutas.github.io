@@ -41,11 +41,18 @@ bio:
       and see patients at Medipol Mega University Hospital — mainly epilepsy and
       EEG, movement disorders, dementia, disorders of consciousness and stroke.
     - >
-      My research uses EEG microstate analysis and quantitative EEG to ask how
-      resting-state brain networks reorganise in disorders of consciousness,
+      A central question in my work is what consciousness looks like in the
+      brain's electrical activity. Using EEG microstate analysis I study the
+      neural correlates of consciousness and how they break down in disorders of
+      consciousness — coma, unresponsive wakefulness and the minimally conscious
+      state — where the bedside examination alone often cannot separate one
+      condition from another. What I am after is objective EEG markers that say
+      something about a patient's residual awareness and prognosis.
+    - >
+      The same methods carry over to other conditions. With EEG microstates and
+      quantitative EEG I follow how resting-state networks reorganise in
       Parkinson's disease and Alzheimer's disease, and how non-invasive
-      neuromodulation — rTMS, tDCS and tACS — changes them. The aim throughout is
-      objective, EEG-based markers that hold up at the bedside.
+      neuromodulation — rTMS, tDCS and tACS — changes them.
     - >
       I work in the Clinical Electrophysiology, Neuroimaging and Neuromodulation
       Laboratory (SABİTA / REMER) and the Brain and Cognition Research Centre
@@ -62,12 +69,18 @@ bio:
       hareket bozuklukları, demans, bilinç bozuklukları ve inme olmak üzere
       hasta kabul ediyorum.
     - >
-      Araştırmalarımda EEG mikrodurum analizi ve nicel EEG (qEEG) kullanarak
-      bilinç bozukluklarında, Parkinson ve Alzheimer hastalığında dinlenim
-      durumu beyin ağlarının nasıl yeniden örgütlendiğini; invaziv olmayan
-      nöromodülasyonun — rTMS, tDCS ve tACS — bu ağları nasıl değiştirdiğini
-      inceliyorum. Amacım klinikte de karşılığı olan, EEG temelli nesnel
-      biyobelirteçler geliştirmek.
+      Çalışmalarımın merkezinde şu soru duruyor: Bilinç, beynin elektriksel
+      etkinliğinde nasıl görünür? EEG mikrodurum analiziyle bilincin nöral
+      korelatlarını ve bunların bilinç bozukluklarında — koma, tepkisiz
+      uyanıklık ve minimal bilinçli durum — nasıl bozulduğunu inceliyorum; bu
+      tablolarda klinik muayene tek başına çoğu zaman ayrım yapmaya yetmiyor.
+      Peşinde olduğum şey, hastanın artakalan farkındalığı ve gidişatı hakkında
+      bilgi veren nesnel EEG belirteçleri.
+    - >
+      Aynı yöntemler başka tablolarda da işe yarıyor. EEG mikrodurumları ve
+      nicel EEG (qEEG) ile Parkinson ve Alzheimer hastalığında dinlenim durumu
+      ağlarının nasıl yeniden örgütlendiğini, invaziv olmayan nöromodülasyonun —
+      rTMS, tDCS ve tACS — bu ağları nasıl değiştirdiğini izliyorum.
     - >
       Klinik Elektrofizyoloji, Nörogörüntüleme ve Nöromodülasyon Laboratuvarı
       (SABİTA / REMER) ile Beyin ve Biliş Araştırmaları Merkezi (BEYKOG)
@@ -82,6 +95,7 @@ interests:
     - "EEG microstates"
     - "Quantitative EEG (qEEG)"
     - "Resting-state networks"
+    - "Neural correlates of consciousness"
     - "Disorders of consciousness"
     - "Parkinson's disease"
     - "Alzheimer's disease &amp; dementia"
@@ -92,6 +106,7 @@ interests:
     - "EEG mikrodurumları"
     - "Nicel EEG (qEEG)"
     - "Dinlenim durumu ağları"
+    - "Bilincin nöral korelatları"
     - "Bilinç bozuklukları"
     - "Parkinson hastalığı"
     - "Alzheimer ve demans"
