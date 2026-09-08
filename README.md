@@ -1,127 +1,125 @@
-# Akademik kişisel site — Jekyll + GitHub Pages
+# erentoplutas.github.io
+
+Eren Toplutaş'ın akademik kişisel sitesinin kaynak kodu.
+Yayında: **https://erentoplutas.github.io**
 
 İki dilli (İngilizce / Türkçe), koyu–açık temalı, eklentisiz bir Jekyll sitesi.
-İçeriğin tamamı `_data/` klasöründeki YAML dosyalarından gelir; şablonlara
-dokunmadan sitenin tamamını güncelleyebilirsiniz.
+GitHub Pages her commit'ten sonra kendisi derler.
 
 ```
-/                 → İngilizce ana sayfa
-/publications/    → Yayınlar
-/cv/              → Özgeçmiş
-/misc/            → Diğer
-/tr/              → Türkçe karşılıkları (/tr/yayinlar/, /tr/ozgecmis/, /tr/diger/)
+/                 → About            /tr/            → Hakkımda
+/publications/    → Publications     /tr/yayinlar/   → Yayınlar
+/cv/              → CV               /tr/ozgecmis/   → Özgeçmiş
+/misc/            → Misc             /tr/diger/      → Diğer
 ```
 
 ---
 
-## 1. Yayına alma (5 dakika)
+## Nasıl çalışıyor
 
-1. GitHub'da **`KULLANICIADI.github.io`** adında yeni bir depo (repository) açın.
-   Kullanıcı adınız `erentoplutas` ise depo adı tam olarak
-   `erentoplutas.github.io` olmalı.
-2. Bu klasördeki dosyaların **tamamını** depoya yükleyin:
-
-   ```bash
-   cd site
-   git init
-   git add .
-   git commit -m "İlk sürüm"
-   git branch -M main
-   git remote add origin https://github.com/KULLANICIADI/KULLANICIADI.github.io.git
-   git push -u origin main
-   ```
-
-   (Terminal kullanmak istemezseniz: GitHub'da depo sayfasında
-   **Add file → Upload files** ile klasördeki dosyaları sürükleyip bırakın.)
-
-3. Depoda **Settings → Pages** bölümüne girin.
-   *Source* olarak **Deploy from a branch**, dal olarak **main / (root)** seçin.
-4. 1–2 dakika sonra site `https://KULLANICIADI.github.io` adresinde yayında olur.
-
-> **Önemli:** `_config.yml` içindeki `url:` satırını kendi adresinizle
-> güncelleyin. Yanlış kalırsa sosyal medya önizlemeleri ve site haritası
-> yanlış adresi gösterir.
-
-Kendi alan adınızı (ör. `erentoplutas.com`) kullanmak isterseniz: kök dizine
-tek satırlık bir `CNAME` dosyası ekleyin, içine alan adını yazın ve
-Settings → Pages → Custom domain alanına da girin.
-
----
-
-## 2. Ne, nerede düzenlenir
-
-| Ne değişecek | Dosya |
-|---|---|
-| Site adresi, dil ayarları | `_config.yml` |
-| Ad, unvan, kurum, biyografi, ilgi alanları | `_data/profile.yml` |
-| E-posta, ORCID, Scholar, LinkedIn, GitHub… | `_data/social.yml` |
-| Menü adları ve sırası | `_data/nav.yml` |
-| Yayın listesi | `_data/publications.yml` |
-| Özgeçmiş zaman çizelgesi + PDF | `_data/cv.yml` |
-| Ana sayfadaki haberler | `_data/news.yml` |
-| "Diğer" sayfasındaki kutular | `_data/misc.yml` |
-| Arayüz metinleri (butonlar, başlıklar) | `_data/i18n/en.yml`, `_data/i18n/tr.yml` |
-| Renkler, yazı tipleri, boşluklar | `assets/css/style.css` (en üstteki `:root`) |
+İçeriğin tamamı `_data/` klasöründeki YAML dosyalarından gelir.
+**Şablonlara (`_layouts`, `_includes`) dokunmanız gerekmez** — sitenin tamamını
+yedi veri dosyasından yönetebilirsiniz.
 
 Her içerik alanı iki dillidir:
 
 ```yaml
 role:
-  en: "MD · Neurologist & Neuroscientist"
-  tr: "Dr. · Nörolog & Sinirbilimci"
+  en: "MD, PhD · Neurologist &amp; Neuroscientist"
+  tr: "Dr. Öğr. Üyesi · Nöroloji Uzmanı ve Sinirbilimci"
 ```
 
-`&` işaretini YAML içinde `&amp;` olarak yazın (HTML'e olduğu gibi aktarılır).
+Boş kalan bölümler (yayını olmayan bir kategori, boş haber listesi) sayfada
+otomatik gizlenir.
 
 ---
 
-## 3. Fotoğraf ve CV eklemek
+## Güncelleme
 
-* **Profil fotoğrafı:** Kare bir görseli `assets/img/profile.jpg` olarak
-  kaydedin, sonra `_data/profile.yml` içinde:
+**En pratik yol:** Bu depo sayfasındayken klavyeden **`.`** tuşuna basın.
+Aynı sekmede tarayıcı içi bir kod editörü (github.dev) açılır — kurulum
+gerekmez. Dosyayı düzenleyin, sol kenardaki dal ikonundan (Source Control)
+mesaj yazıp **Commit & Push**. Site 1–2 dakikada yenilenir.
 
-  ```yaml
-  photo: "/assets/img/profile.jpg"
-  ```
+Editörün avantajı, YAML girinti hatalarını commit etmeden önce göstermesidir.
 
-  Şu an yerine geçici bir SVG (`profile-placeholder.svg`) kullanılıyor.
+**Tek satır değişecekse:** Dosyaya tıklayın → sağ üstteki kalem ikonu →
+düzeltin → **Commit changes**.
 
-* **CV PDF'i:** Dosyayı `assets/files/cv.pdf` olarak koyun. `_data/cv.yml`
-  içindeki `pdf:` satırı zaten oraya bakıyor. PDF koymak istemiyorsanız
-  `pdf: ""` yapın; buton otomatik gizlenir.
-
-* **Favicon:** `assets/img/favicon.svg` — içindeki harfi değiştirebilirsiniz.
+**Dosyanın tamamı değişecekse:** İlgili klasöre girin →
+**Add file → Upload files** → aynı adlı dosyayı sürükleyin (üzerine yazar).
 
 ---
 
-## 4. Yayın eklemek
+## Yeni yayın ekleme
 
-`_data/publications.yml` içindeki `items:` listesine yeni bir madde ekleyin:
+`_data/publications.yml` içindeki `items:` listesine ekleyin.
+Sıralamayı site yapar (yeniden eskiye), siz sadece bloğu yapıştırın:
 
 ```yaml
-  - category: "article"        # article | chapter | conference | progress
-    year: 2026
+  - category: "article"
+    year: 2027
     authors: "Toplutaş E, Yazar B, Yazar C"
     title: "Makalenin tam başlığı"
     venue: "Journal of Something"
-    details: "14(2), 55–70"
-    doi: "10.1000/xyz123"      # varsa
-    pdf: "/assets/files/makale.pdf"   # isteğe bağlı
-    code: "https://github.com/..."    # isteğe bağlı
-    selected: true             # ana sayfada da görünsün mü
+    details: "14(2), 55-70"
+    doi: "10.1000/xyz123"
+    selected: true
 ```
 
-* Yıllar otomatik olarak yeniden eskiye sıralanır.
-* Kendi isminiz listede otomatik kalınlaşır — isim varyantlarınızı
-  `_data/profile.yml` içindeki `name_highlight` listesine ekleyin.
-* Yeni bir kategori isterseniz `categories:` listesine ekleyip aynı `key`
-  değerini yayınlarda kullanın.
+- `category` → `article`, `chapter`, `conference` veya `progress`
+- `doi` → sadece numara, `https://doi.org/` olmadan. DOI yoksa satırı silip
+  yerine `url: "https://pubmed..."` yazın
+- `selected: true` → ana sayfadaki "Seçilmiş yayınlar" bölümüne de çıkar
+- İsminiz listede otomatik kalınlaşır; `Toplutaş E` biçiminde yazmanız yeterli.
+  Farklı yazımlar `_data/profile.yml` içindeki `name_highlight` listesinde
 
 ---
 
-## 5. Yeni sayfa eklemek
+## Haber ekleme
 
-İki dilli tutmak için iki dosya oluşturun. Örnek: "Teaching / Dersler"
+`_data/news.yml` — ana sayfada en yeni dördü görünür.
+
+```yaml
+- date: 2027-03-01
+  label: "2027"
+  en: "New paper in **Brain Topography**."
+  tr: "**Brain Topography** dergisinde yeni makale."
+  url: "https://doi.org/10.1000/xyz123"
+```
+
+`date` yalnızca sıralama içindir, ekranda görünmez. `label` ekranda görünen
+etikettir; yazmazsanız "Mar 2027" biçiminde kendisi oluşturur.
+
+---
+
+## Ne nerede
+
+| Değiştirilecek | Dosya |
+|---|---|
+| Ad, unvan, kurum, biyografi, ilgi alanları, fotoğraf | `_data/profile.yml` |
+| Yayın listesi | `_data/publications.yml` |
+| Özgeçmiş bölümleri | `_data/cv.yml` |
+| Ana sayfa haberleri | `_data/news.yml` |
+| "Diğer" sayfasındaki kutular | `_data/misc.yml` |
+| Bağlantı ikonları | `_data/social.yml` |
+| Menü adları ve sırası | `_data/nav.yml` |
+| Buton ve başlık metinleri | `_data/i18n/en.yml`, `_data/i18n/tr.yml` |
+| Renkler, yazı tipleri | `assets/css/style.css` → en üstteki `:root` |
+| Site adresi, dil ayarları | `_config.yml` |
+
+**Fotoğraf:** Kare bir görseli `assets/img/` içine koyup `_data/profile.yml`
+içindeki `photo:` satırını güncelleyin. 800×800 piksel yeterli.
+
+**CV PDF'i:** Şu an kapalı. Açmak için PDF'i `assets/files/` içine koyup
+`_data/cv.yml` içindeki `pdf: ""` satırını `pdf: "/assets/files/cv.pdf"`
+yapın; indirme butonu geri gelir.
+
+---
+
+## Yeni sayfa ekleme
+
+İki dilli tutmak için iki dosya gerekir. Örnek: "Teaching / Dersler"
 
 `teaching.html` (kök dizin):
 
@@ -137,21 +135,8 @@ alt_url: /tr/dersler/
 <p>İçerik…</p>
 ```
 
-`tr/dersler.html`:
-
-```yaml
----
-layout: page
-lang: tr
-nav_key: teaching
-title: Dersler
-permalink: /tr/dersler/
-alt_url: /teaching/
----
-<p>İçerik…</p>
-```
-
-Sonra `_data/nav.yml` dosyasına ekleyin:
+`tr/dersler.html` aynı yapıda, `lang: tr` ve karşılıklı `permalink` / `alt_url`
+ile. Sonra `_data/nav.yml` dosyasına ekleyin:
 
 ```yaml
 - key: "teaching"
@@ -161,63 +146,65 @@ Sonra `_data/nav.yml` dosyasına ekleyin:
 
 ---
 
-## 6. Renkleri değiştirmek
+## YAML'ı bozmadan
 
-`assets/css/style.css` dosyasının en üstündeki `:root` bloğu tüm paleti
-belirler. Vurgu rengini değiştirmek için üç yerdeki `--accent` değerini
-güncelleyin (açık tema, koyu tema, `[data-theme="dark"]`):
+Sitenin bozulmasının neredeyse tek sebebi bozuk YAML'dır. Üç kural yeter:
 
-```css
---accent:      #1f6f63;   /* açık tema */
---accent-ink:  #14514a;   /* bağlantı metni */
---accent-soft: rgba(31, 111, 99, 0.10);
-```
+1. **Girintiyi boşlukla yapın, Tab kullanmayın.** En güvenlisi var olan bir
+   satırı kopyalayıp üzerine yazmaktır.
+2. **Aynı seviyedeki satırlar aynı hizada başlar.** Bir yayın bloğunda
+   `- category:` ile `year:` arasındaki fark iki boşluktur.
+3. **Metni tırnak içine alın** — özellikle içinde `:` , `#` veya kesme işareti
+   varsa. Türkçe karakterler sorun değildir.
 
-Yazı tipleri `--font-display` (başlıklar) ve `--font-body` (metin)
-değişkenlerinden gelir; Google Fonts bağlantısı `_includes/head.html`
-içindedir.
+Metin içinde "ve" anlamında `&` yazacaksanız `&amp;` biçiminde yazın.
 
 ---
 
-## 7. Bilgisayarınızda önizleme (isteğe bağlı)
+## Ters giderse
 
-GitHub Pages'e göndermeden görmek isterseniz Ruby gerekir:
+| Belirti | Sebebi ve çözümü |
+|---|---|
+| Site güncellenmedi | Derleme 1–2 dakika sürer. Sonra <kbd>Ctrl/Cmd</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> ile sayfayı zorla yenileyin |
+| Commit'in yanında kırmızı ✗ | YAML hatası. **Actions** sekmesinde başarısız işi açın; hangi dosyanın kaçıncı satırında sorun olduğunu yazar |
+| Bir bölüm kayboldu | O bölümün listesi boşaldı ya da girinti bozuldu — ilgili `.yml` dosyasına bakın |
+| Sayfa biçimsiz, düz yazı gibi | CSS yüklenmiyor. Depo adının `KULLANICIADI.github.io` olduğundan emin olun |
+| Geri almak istiyorum | **Commits** listesinde bozulmadan önceki commit'i açın → **Revert** |
+
+---
+
+## Teknik notlar
+
+- **Eklenti kullanılmıyor.** GitHub Pages'in kendi Jekyll derleyicisiyle olduğu
+  gibi çalışır; `github-pages` gem'i dışında bir şey gerekmez.
+- `sitemap.xml`, `robots.txt`, `hreflang` etiketleri ve schema.org Person
+  verisi elle yazılmıştır.
+- Tema seçimi `localStorage`'da saklanır; seçim yoksa işletim sistemi tercihi
+  kullanılır.
+- Erişilebilirlik: klavye odak halkaları, "içeriğe geç" bağlantısı,
+  `prefers-reduced-motion` desteği, anlamlı `aria` etiketleri.
+- CV sayfası yazdırmaya uygun biçimlendirilmiştir (`@media print`).
+
+### Bilgisayarda önizleme (isteğe bağlı)
+
+Değişiklikleri göndermeden görmek isterseniz Ruby gerekir:
 
 ```bash
-gem install bundler
 bundle install
-bundle exec jekyll serve
-# → http://localhost:4000
+bundle exec jekyll serve   # → http://localhost:4000
 ```
 
-Ruby kurmak istemiyorsanız bu adımı atlayabilirsiniz; GitHub Pages siteyi
-kendisi derler.
+Gerekmez — GitHub Pages siteyi kendisi derler.
 
 ---
 
-## 8. Teknik notlar
+## English
 
-* **Eklenti kullanılmıyor.** Site, GitHub Pages'in kendi Jekyll derleyicisiyle
-  olduğu gibi çalışır; `github-pages` gem'i dışında bir şey gerekmez.
-* Site haritası (`sitemap.xml`), `robots.txt`, `hreflang` etiketleri ve
-  schema.org Person verisi elle yazılmıştır.
-* Karanlık/aydınlık tema seçimi `localStorage` içinde saklanır; hiçbir şey
-  seçilmemişse işletim sistemi tercihi kullanılır.
-* Erişilebilirlik: klavye odak halkaları, "içeriğe geç" bağlantısı,
-  `prefers-reduced-motion` desteği ve anlamlı `aria` etiketleri mevcuttur.
-* `preview.mjs`, `shot.mjs`, `package.json` yalnızca geliştirme sırasında
-  önizleme almak içindir; siteye dahil edilmez (`_config.yml` → `exclude`).
-  İstemiyorsanız silebilirsiniz.
+Source of a bilingual (EN/TR) academic site, built with plain Jekyll and no
+plugins, served by GitHub Pages at **https://erentoplutas.github.io**.
 
----
-
-## English summary
-
-A bilingual (EN/TR), plugin-free Jekyll site for an academic profile.
-All content lives in `_data/*.yml` — you never have to touch the templates.
-Create a repo named `USERNAME.github.io`, push these files, enable
-**Settings → Pages → Deploy from a branch → main / (root)**, and update
-`url:` in `_config.yml`. Edit `_data/profile.yml`, `_data/publications.yml`,
-`_data/cv.yml`, `_data/social.yml` and `_data/news.yml` to make it yours.
-Colours and fonts are CSS custom properties at the top of
+All content lives in `_data/*.yml`; the templates in `_layouts` and `_includes`
+rarely need touching. Press <kbd>.</kbd> on this repository page to open the
+browser-based editor, change a data file, and commit — the site rebuilds in a
+minute or two. Colours and fonts are CSS custom properties at the top of
 `assets/css/style.css`.
