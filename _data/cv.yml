@@ -8,14 +8,18 @@
 #             her giriş: period, title, org, place, detail (opsiyonel)
 # ══════════════════════════════════════════════════════════════
 
-pdf: "/assets/files/cv.pdf"
+# PDF indirme butonu kapalı. Açmak isterseniz PDF'i
+# assets/files/ içine koyup yolunu buraya yazın:
+#   pdf: "/assets/files/cv.pdf"
+pdf: ""
+
 updated:
   en: "September 2026"
   tr: "Eylül 2026"
 
 intro:
-  en: "A short version of my academic record. The PDF below is always the most recent one."
-  tr: "Akademik geçmişimin kısa bir özeti. Aşağıdaki PDF her zaman en güncel sürümdür."
+  en: "A short version of my academic record. Write to me if you need a detailed CV."
+  tr: "Akademik geçmişimin kısa bir özeti. Ayrıntılı özgeçmiş için bana yazabilirsiniz."
 
 sections:
   - key: "appointments"

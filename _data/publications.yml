@@ -9,6 +9,7 @@
 #  selected: true  →  ana sayfadaki "Seçilmiş yayınlar" bölümüne çıkar
 #
 #  Boş kalan kategoriler sayfada otomatik gizlenir.
+#  Künyeler PubMed MEDLINE kayıtlarından doğrulanmıştır.
 # ══════════════════════════════════════════════════════════════
 
 categories:
@@ -26,13 +27,14 @@ categories:
     tr: "Devam eden çalışmalar"
 
 items:
+  # ── 2026 ────────────────────────────────────────────────────
   - category: "article"
     year: 2026
     authors: "Toplutaş E, Uysal-Kaba R, Güntekin B, Hanoğlu L"
     title: "Altered EEG microstate transition patterns and visual hallucinations in Parkinson's Disease"
     venue: "International Journal of Psychophysiology"
-    details: "113369"
-    url: "https://pubmed.ncbi.nlm.nih.gov/41895342/"
+    details: "224, 113369"
+    doi: "10.1016/j.ijpsycho.2026.113369"
     selected: true
 
   - category: "article"
@@ -44,6 +46,30 @@ items:
     doi: "10.3389/fnagi.2026.1734828"
 
   - category: "article"
+    year: 2026
+    authors: "Ermiş A, Salar AB, Toplutaş E, Akan GE, Birday E"
+    title: "Investigation of glymphatic system function in radiologically isolated syndrome"
+    venue: "Clinical Neurology and Neurosurgery"
+    details: "267, 109431"
+    doi: "10.1016/j.clineuro.2026.109431"
+
+  - category: "article"
+    year: 2026
+    authors: "Polat B, Toplutaş E, Şahan Ilgaz H, Bulut S, Yalınay Dikmen P, Karadaş Ö, Özge A"
+    title: "Headache education in medical schools in Türkiye: the perspective of final-year medical students"
+    venue: "BMC Medical Education"
+    doi: "10.1186/s12909-026-09683-w"
+
+  - category: "article"
+    year: 2026
+    authors: "Meral HB, Aysal F, Aliyeva T, Toplutaş E"
+    title: "Osteoporosis knowledge and health beliefs in individuals with myasthenia gravis: a cross-sectional controlled study"
+    venue: "Revista da Associação Médica Brasileira"
+    details: "72(2), e20251090"
+    doi: "10.1590/1806-9282.20251090"
+
+  # ── 2025 ────────────────────────────────────────────────────
+  - category: "article"
     year: 2025
     authors: "Çadırcı Tungaç F, Toplutaş E, Mantar N, Güntekin B, Hanoğlu L"
     title: "Apathy in Parkinson's Disease: EEG Microstate Characteristics"
@@ -51,6 +77,15 @@ items:
     details: "38(4), 49"
     doi: "10.1007/s10548-025-01124-z"
 
+  - category: "article"
+    year: 2025
+    authors: "Meral HB, Aliyeva T, Toplutaş E"
+    title: "Evaluating the Educational Value and Content Quality of YouTube Videos on Myasthenia Gravis"
+    venue: "Muscle &amp; Nerve"
+    details: "72(5), 1067–1073"
+    doi: "10.1002/mus.28490"
+
+  # ── 2024 ────────────────────────────────────────────────────
   - category: "article"
     year: 2024
     authors: "Toplutaş E, Aydın F, Hanoğlu L"
@@ -69,6 +104,7 @@ items:
     doi: "10.1007/s10548-023-00993-6"
     selected: true
 
+  # ── 2022 ────────────────────────────────────────────────────
   - category: "article"
     year: 2022
     authors: "Hanoğlu L, Toplutaş E, Sarıcaoğlu M, Velioğlu HA, Yıldız S, Yuluğ B"
@@ -78,12 +114,8 @@ items:
     doi: "10.3389/fnins.2022.798558"
 
   # ── Kongre bildirilerinizi buraya ekleyin ────────────────────
-  # CV'nizde "çok sayıda sözlü ve poster bildiri" yazıyor ama
-  # tek tek listelenmemiş. Eklemek isterseniz kalıp şu şekilde:
-  #
   # - category: "conference"
   #   year: 2025
   #   authors: "Toplutaş E, Hanoğlu L"
   #   title: "Bildiri başlığı"
   #   venue: "Kongre adı, Şehir"
-  #   url: ""
